@@ -9,8 +9,7 @@ using namespace std;
 
 class Solution {
   public:
-        // Code here
-        double fdiv(string str) {
+            double fdiv(string str) {
         string a="",b="";
         int c=0;
         for(int i=0; i<str.size(); i++){
