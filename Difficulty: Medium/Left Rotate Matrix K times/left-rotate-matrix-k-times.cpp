@@ -11,15 +11,24 @@ using namespace std;
 class Solution {
   public:
     vector<vector<int>> rotateMatrix(int k, vector<vector<int>> mat) {
-        // code here
-        k = k%mat[0].size();
-        for(auto &row:mat)
+       int n=mat.size(),m=mat[0].size();
+        vector<vector<int>>count(n,vector<int>(m,0));
+        k%=m;
+        for(int i=0;i<n;i++)
         {
-            reverse(row.begin(),row.begin()+k);
-            reverse(row.begin()+k,row.end());
-            reverse(row.begin(),row.end());
+            int a=0;
+            for(int j=k;j<m;j++)
+            {
+                count[i][a++]=mat[i][j];
+            }
+        
+            for(int j=0;j<k;j++)
+            {
+                count[i][a++]=mat[i][j];
+            }
         }
-        return mat;
+        
+        return count;
     }
 };
 
