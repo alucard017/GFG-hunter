@@ -34,7 +34,7 @@ int main() {
 
 
 bool isToeplitz(vector<vector<int>>& v) {
-    // code here 
+    // code here
     int i=0;
     int n=v.size(), m = v[0].size();
     unordered_map<int, int> mp;
