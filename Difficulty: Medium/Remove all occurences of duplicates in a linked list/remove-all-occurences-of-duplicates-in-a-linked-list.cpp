@@ -30,9 +30,9 @@ struct Node {
 
 class Solution {
   public:
-    Node* removeAllDuplicates(Node* head) {
-         
-    Node* temp = head;       
+    Node* removeAllDuplicates(struct Node* head) {
+        // code here
+        Node* temp = head;       
         Node* prev = nullptr;     
         while (temp != NULL && temp->next != NULL) {          
         if (temp->data != temp->next->data) {                     
@@ -60,7 +60,7 @@ class Solution {
 
      // Return the updated head of the list
     return head;
-}
+    }
 };
 
 //{ Driver Code Starts.
