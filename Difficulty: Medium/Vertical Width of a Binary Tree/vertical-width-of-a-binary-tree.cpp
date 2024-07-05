@@ -82,7 +82,7 @@ Node *buildTree(string str) {
 class Solution {
   public:
     // Function to find the vertical width of a Binary Tree.
-    int maxi = 0;
+     int maxi = 0;
     int mini = 0;
     void Solve(Node* root, int distance)
     {
@@ -103,8 +103,6 @@ class Solution {
        Solve(root,0);
        return (maxi-mini)+1;
     }
-
-
 };
 
 
