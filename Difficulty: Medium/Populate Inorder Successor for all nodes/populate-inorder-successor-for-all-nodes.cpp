@@ -117,28 +117,25 @@ struct Node
 class Solution {
   public:
 
-   void build(Node*& root , Node*& prev){
-       if(root){
-           build(root->left , prev);
-           if(prev){
-               prev->next=root;
-               prev=root;
-           }else{
-               prev=root;
-           }
-           
-           build(root->right, prev);
-       }
-   }
-    
+    void inOrder(Node* root, stack<Node*>& st){
+        if(!root)
+            return;
+        inOrder(root->left, st);
+        st.push(root);
+        inOrder(root->right, st);
+    }
     void populateNext(Node *root) {
         // code here
-      Node* prev=nullptr;
-    
-      build(root, prev );
-       
-      
-       
+        stack<Node*> st;
+        inOrder(root, st);
+        Node* prev = st.top();
+        st.pop();
+        while(!st.empty()){
+            Node* tr = st.top();
+            tr->next = prev;
+            prev = tr;
+            st.pop();
+        }
     }
 };
 
