@@ -124,7 +124,6 @@ class Solution {
     }
 };
 
-
 //{ Driver Code Starts.
 int main() {
     int t;
