@@ -18,6 +18,7 @@ class Solution:
         return self.hasPathSum(root.left, target) or self.hasPathSum(root.right, target)
 
 
+
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
