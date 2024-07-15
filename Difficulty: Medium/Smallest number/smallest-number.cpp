@@ -7,7 +7,7 @@ using namespace std;
 // User function Template for C++
 class Solution {
   public:
-   string smallestNumber(int s, int d) {
+    string smallestNumber(int s, int d) {
         if (s > 9 * d || (s == 0 && d > 1)) {
         return "-1";
     }
